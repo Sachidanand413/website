@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Git Checkout'){
             steps{
-                git credentialsId: 'Azure-Devops-repo', url: 'almatoolbox@vs-ssh.visualstudio.com:v3/almatoolbox/SachidanandProject/SachidanandProject'
+                git branch: 'main', url: 'https://github.com/Sachidanand413/website.git'
             }
         }
         stage('Maven build'){
