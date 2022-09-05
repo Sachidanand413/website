@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    stages{
+        stage('Git Checkout'){
+            steps{
+                git credentialsId: 'Azure-Devops-repo', url: 'almatoolbox@vs-ssh.visualstudio.com:v3/almatoolbox/SachidanandProject/SachidanandProject'
+            }
+        }
+        stage('Maven build'){
+            steps{
+                bat 'mvn clean package'
+            }
+        }
+        stage('Docker Image'){
+            steps{
+
+            }
+        }
+    }
+}
