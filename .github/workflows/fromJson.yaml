@@ -1,4 +1,4 @@
-name: build
+name: fromJson
 on: push
 jobs:
   job1:
