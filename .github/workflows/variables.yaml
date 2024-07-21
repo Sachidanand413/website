@@ -1,4 +1,4 @@
-name: variables
+name: Different contexts
 on: workflow_dispatch
 
 jobs:
@@ -11,6 +11,9 @@ jobs:
       - name: condition 2
         if: runner.os != 'Windows'
         run: echo "The operating system on the runner is not Windows, it's $RUNNER_OS."
-      - name: context variables
+      - name: github context examples
         run: |
-          echo "${{ github.repository_id }}"
+          echo "Git repository id= ${{ github.repository_id }}"
+          echo "Git Url = ${{ github.repositoryUrl }}"
+          echo "Git Run id = ${{ github.run_id }}"
+          echo "Git workspace = ${{ github.workspace }}"
