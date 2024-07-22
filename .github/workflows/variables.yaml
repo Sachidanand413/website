@@ -17,3 +17,5 @@ jobs:
           echo "Git Url = ${{ github.repositoryUrl }}"
           echo "Git Run id = ${{ github.run_id }}"
           echo "Git workspace = ${{ github.workspace }}"
+      - name: Create annotation for build error
+        run: echo "::error file=app.js,line=1::Missing semicolon"
