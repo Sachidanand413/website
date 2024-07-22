@@ -5,7 +5,7 @@ on:
 
 jobs:
   job1:
-    uses: ./.github/workflows/reuseWorkflow
+    uses: ./.github/workflows/reuseWorkflow.yaml
 
   job2:
     runs-on: ubuntu-latest
