@@ -24,3 +24,6 @@ jobs:
             echo "::group::My title"
             echo "Inside group"
             echo "::endgroup::"        
+      - name: JobSummary
+        run: |
+          echo "{markdown content}" >> $GITHUB_STEP_SUMMARY
