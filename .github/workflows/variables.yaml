@@ -19,3 +19,8 @@ jobs:
           echo "Git workspace = ${{ github.workspace }}"
       - name: Create annotation for build error
         run: echo "::error file=app.js,line=1::Missing semicolon"
+      - name: Group of log lines
+        run: |
+            echo "::group::My title"
+            echo "Inside group"
+            echo "::endgroup::"        
